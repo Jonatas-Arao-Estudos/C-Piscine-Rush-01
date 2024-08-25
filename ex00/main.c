@@ -6,11 +6,12 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 11:02:43 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/08/25 18:59:04 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/08/25 19:13:46 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 #include "ft_strlen.h"
 #include "ft_enter_input.h"
 #include "ft_square_matrix.h"
@@ -38,6 +39,7 @@ int	main(int argc, char **argv)
 			else
 				write(1, "Error\n", 6);
 			ft_free_matrix(matrix, size / 4);
+			free(input);
 		}
 		else
 			write(1, "Error\n", 6);
