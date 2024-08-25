@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix.c                                           :+:      :+:    :+:   */
+/*   ft_square_matrix.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 18:41:50 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/08/24 20:13:03 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/08/25 08:05:34 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <unistd.h>
 
 int	**ft_square_matrix(int size)
 {
@@ -34,36 +33,4 @@ int	**ft_square_matrix(int size)
 		index = index + 1;
 	}
 	return (matrix);
-}
-
-void	ft_print_matrix(int **matrix, int row, int col)
-{
-	char	number;
-	int		index;
-	int		jump;
-
-	index = 0;
-	jump = 0;
-	while (index < row)
-	{
-		while (jump < col)
-		{
-			number = '0' + matrix[index][jump];
-			write(1, &number, 1);
-			jump = jump + 1;
-		}
-		write(1, "\n", 1);
-		free(matrix[index]);
-		jump = 0;
-		index = index + 1;
-	}
-	free(matrix);
-}
-
-int	main(void)
-{
-	int		**matrix;
-
-	matrix = ft_square_matrix(4);
-	ft_print_matrix(matrix, 4, 4);
 }
