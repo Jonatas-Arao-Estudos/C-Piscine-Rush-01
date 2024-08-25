@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_square_matrix.h                                 :+:      :+:    :+:   */
+/*   ft_enter_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 08:12:41 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/08/25 15:50:50 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/08/25 15:45:46 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/08/25 15:46:48 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SQUARE_MATRIX_H
-# define FT_SQUARE_MATRIX_H
+#include <stdlib.h>
 
-int	**ft_square_matrix(int size);
+int	*ft_enter_input(char *input, int size)
+{
+	int	index;
+	int	jump;
+	int	*num_input;
 
-#endif
+	num_input = (int *) malloc(size * 4);
+	index = 0;
+	jump = 0;
+	while (input[index] != '\0')
+	{
+		if (input[index] >= '0' && input[index] <= '9')
+		{
+			num_input[jump] = input[index] - '0';
+			jump = jump + 1;
+		}
+		index = index + 1;
+	}
+	return (num_input);
+}

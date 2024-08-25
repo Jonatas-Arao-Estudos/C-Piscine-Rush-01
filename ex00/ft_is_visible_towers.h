@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_square_matrix.h                                 :+:      :+:    :+:   */
+/*   ft_is_visible_towers.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 08:12:41 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/08/25 15:50:50 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/08/25 17:15:43 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/08/25 17:57:57 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SQUARE_MATRIX_H
-# define FT_SQUARE_MATRIX_H
+#ifndef FT_IS_VISIBLE_TOWERS_H
+# define FT_IS_VISIBLE_TOWERS_H
 
-int	**ft_square_matrix(int size);
+int	ft_is_visible_towers(int **matrix, int item, int *input, int size);
 
 #endif
